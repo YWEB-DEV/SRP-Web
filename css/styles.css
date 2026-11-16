@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
+  scroll-padding-top: 11rem;
 }
 
 body {
@@ -126,24 +126,8 @@ h1, h2, h3 {
 
 .brand-logo {
   display: block;
-  height: 64px;
+  height: 108px;
   width: auto;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.brand-text strong {
-  color: var(--navy);
-  font-size: 1.15rem;
-}
-
-.brand-text small {
-  color: var(--muted);
-  font-size: 0.8rem;
 }
 
 .site-nav {
@@ -253,6 +237,48 @@ h1, h2, h3 {
 .btn-line:hover,
 .btn-line:focus-visible {
   background: var(--sky);
+}
+
+.btn-whatsapp {
+  gap: 0.45rem;
+  background: #25d366;
+  color: #08301a;
+}
+
+.btn-whatsapp svg,
+.whatsapp-float svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  background: #1ebe5b;
+  color: #08301a;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 0.95rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #08301a;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(8, 48, 26, 0.25);
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  background: #1ebe5b;
+  color: #08301a;
 }
 
 .hero-logo {
@@ -366,9 +392,13 @@ h1, h2, h3 {
   padding: 2rem 5vw;
 }
 
+.contact-copy .btn-whatsapp {
+  margin-bottom: 1rem;
+}
+
 .phone {
-  display: inline-block;
-  margin: 0.4rem 0 0.9rem;
+  display: block;
+  margin: 0.4rem 0 0.7rem;
   color: var(--navy);
   font-size: 1.8rem;
   font-weight: 700;
@@ -497,15 +527,7 @@ address {
   }
 
   .brand-logo {
-    height: 54px;
-  }
-
-  .brand-text {
-    max-width: 11.5rem;
-  }
-
-  .brand-text small {
-    font-size: 0.72rem;
+    height: 84px;
   }
 
   .hero,
