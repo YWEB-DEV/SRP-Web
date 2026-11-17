@@ -25,7 +25,12 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background: var(--page);
+  background-color: #14171a;
+  background-image: url("../images/tools-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: "Segoe UI", Tahoma, sans-serif;
   font-size: 16px;
   line-height: 1.55;
@@ -182,20 +187,25 @@ h1, h2, h3 {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 2rem;
   align-items: center;
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 2.5rem 5vw 2rem;
+  max-width: none;
+  margin: 0;
+  padding: 3rem max(5vw, calc((100vw - var(--max)) / 2)) 2.6rem;
+  color: #f4f7fb;
+  background:
+    linear-gradient(100deg, rgba(8, 14, 22, 0.88) 0%, rgba(8, 14, 22, 0.62) 48%, rgba(8, 14, 22, 0.22) 100%),
+    url("../images/tools-bg.jpg") center right / cover no-repeat;
 }
 
 .hero h1 {
   margin-bottom: 0.75rem;
   font-size: 2.15rem;
-  max-width: 16ch;
+  max-width: 18ch;
+  color: #ffffff;
 }
 
 .hero p {
   max-width: 38rem;
-  color: var(--muted);
+  color: #d7e0ea;
   font-size: 1.05rem;
 }
 
@@ -285,6 +295,9 @@ h1, h2, h3 {
   display: block;
   width: min(100%, 280px);
   margin-inline: auto;
+  padding: 0.7rem 0.8rem 0.4rem;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 12px;
 }
 
 .services,
@@ -292,6 +305,7 @@ h1, h2, h3 {
   max-width: var(--max);
   margin: 0 auto;
   padding: 1.5rem 5vw 2rem;
+  background: rgba(245, 248, 251, 0.96);
 }
 
 .services h2,
@@ -494,6 +508,9 @@ address {
 }
 
 @media (max-width: 860px) {
+  body {
+    background-attachment: scroll;
+  }
   .menu-toggle {
     display: block;
   }
@@ -539,6 +556,9 @@ address {
 
   .hero {
     padding-top: 1.6rem;
+    background:
+      linear-gradient(180deg, rgba(8, 14, 22, 0.86), rgba(8, 14, 22, 0.78)),
+      url("../images/tools-bg.jpg") center / cover no-repeat;
   }
 
   .hero h1 {
